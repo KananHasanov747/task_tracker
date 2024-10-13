@@ -162,8 +162,7 @@ def task_mark_done(id):
     return __task_modify("mark-done", id)
 
 
-if __name__ == "__main__":
-
+def main():
     if args.action == "list":
         task_list(args.status)
 
@@ -181,3 +180,7 @@ if __name__ == "__main__":
 
     else:  # update
         task_update(args.id, args.description)
+
+
+if __name__ == "__main__":
+    main()
